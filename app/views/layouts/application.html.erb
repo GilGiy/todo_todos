@@ -28,7 +28,9 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/todos/new">New Todo</a></a></li>
-            <li><a href="/todos/notebooks">Notebooks</a></a></li>
+						<li>
+							<%= link_to "New Category", new_category_path, method: "get" %>
+						</li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Default</a></li>
