@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources 'todos'
   resources 'categories'
   get '/todos/new' => 'todos#new'
+  get '/todos/notebooks' => 'todos#notebooks'
 end

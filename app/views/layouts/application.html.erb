@@ -28,11 +28,20 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/todos/new">New Todo</a></a></li>
-            <li><a href="#">Notebooks</a></li>
+            <li><a href="/todos/notebooks">Notebooks</a></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Default</a></li>
-            <li><a href="#">Fixed</a></li>
+						<% if current_user %>
+							<li>
+								<%= link_to "Log Out", destroy_user_session_path, method: "delete" %>
+							</li>
+						<% else %>
+							<li>
+								<%= link_to "Log In", new_user_session_path, method: "get" %>
+							</li>
+						<% end %>
+	          <li><a href="#">Fixed</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

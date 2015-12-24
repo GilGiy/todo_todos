@@ -20,6 +20,14 @@ class TodosController < ApplicationController
     end
   end
 
+  def notebooks
+
+  end
+
+  def show
+
+  end
+
   private
 
   def todo_params
