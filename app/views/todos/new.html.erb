@@ -4,7 +4,7 @@
     <%= f.input :title %>
     <%= f.input :body %>
     <%= f.association :category, prompt: "Choose a Notebook" %>
-    <%= f.input :due_date, as: :date %>
+    <%= f.input :due_date, as: :date, html5: true %>
     <%= f.button :submit %>
   <% end %>
 </div>

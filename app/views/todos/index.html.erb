@@ -1,5 +1,23 @@
 <h2>Your Todos</h2>
 
+<div class="crreate-todo row">
+
+  <%= simple_form_for @new_todo do |f| %>
+    <div class="col-md-8">
+      <%= f.input :title %>
+      <%= f.input :body %>
+    </div>
+    <div class="col-md-4">
+      <%= f.association :category, prompt: "Choose a Notebook", html5: true %>
+      <%= f.input :due_date, as: :date, html5: true %>
+    </div>
+    <div class="col-md-12">
+      <%= f.button :submit, class: "btn btn-primary btn-block" %>
+    </div>
+  <% end %>
+</div>
+<h2>Todos</h2>
+
 <table class="table">
   <thead>
     <tr>
